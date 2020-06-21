@@ -41,6 +41,10 @@ app.use(function(req, res) {
   res.status(404).render("404");
 });
 
-http.createServer(app).listen(3000, function() {
-  console.log("Guestbook app started.");
-});
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
+
+// http.createServer(app).listen(5000, function() {
+//   console.log("Guestbook app started.");
+// });
